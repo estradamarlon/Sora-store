@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: sora-store
+    runtime: node
+    buildCommand: cd backend && npm install && cd ../frontend && npm install && npm run build
+    startCommand: node backend/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
